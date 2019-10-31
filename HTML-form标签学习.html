@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>form标签学习</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<!--
+          form表单标签学习：
+                             作用：收集并提交用户数据给指定服务器
+                             
+                             注意1：form 标签会收集其标签内部的数据
+                             属性：
+             action：收集的数据提交地址也就是URL
+             method：收集的数据的提交方式
+             get：适合小量数据，表单数据以？隔开凭借在URL后面，不同键值对使用&符号隔开，不安全
+             post：适合大量数据，安全，隐式提交。
+             
+                     注意2：表单数据的提交，要提交的表单项必须拥有name属性值，否则不会提交
+                                 提交的表单相数据为键值对，键为name属性的值，值为用户书写的数据
+                                 
+                          注意3：form表单数据提交需要依赖于submi提交按钮
+                          
+          form表单域标签学习：
+                          作用：给用户提供可以进行数据书写或者选择额标签。
+                          使用：
+                          文本框：
+                          input：
+                          text   收集少量文本数据，用户可见
+                          password 收集用户密码数据
+                          name：数据提交的键，也会被js使用
+                          value：默认值
+                           单边框：
+                 input
+                      type：
+                      radio
+                      name：name属性值相同的只能数据框只能单选
+                      value：是要提交的数据
+                      checked：checked使用此属性的单选默认是选择
+                      
+            多选框：input：
+            type：checkbox
+            name：一个多选组需要使用相同的name值
+            value：要提交的数据
+            checked：checked使用此属性的多边框默认是选择状态
+                         注意：表单数据提交提交的是表单域标签的value值
+        
+              下拉框：
+              select：
+              neme：数据提交的键名，必须声明
+              子标签option：一个option标签表示一个下拉选项
+              value：要提交的数据
+         
+              文本域：
+              textarea：声明一个可以书写大量文字的文本区域
+              name：数据提交的键名，js和css也会使用
+              rows：声明文本域的行数
+              cols：声明文本域的列数
+        普通按钮：
+        input：
+            type：
+                button
+            value
+     隐藏标签：
+     input：
+        type：
+          hidden
+        value
+          
+              注意：表单数据提交提交的是表单域标签的value值
+        
+         form表单标签的使用：
+                            在点击数据提交时，form标签会将其内部所有form表单域标签中用户按照method指明的
+                            提交方式，提交给action属性所指明的提交地址。
+        -->
+        <h3>form标签学习</h3>
+        <hr />
+        <form action="#" method="get">
+        	用户名：<input type="text" name="uname" id="" value="" /><br />
+        	密码：<input type="password" name="upwd" id="" value="" /><br />
+        	男<input type="radio" name="sex" id="" value="1" checked="checked" />
+        	女<input type="radio" name="sex" id="" value="0" /><br />
+                        爱好：<br />
+                        吃饭：<input type="checkbox" name="favorite" id="" value="1" checked="checked" /><br />
+                        睡觉：<input type="checkbox" name="favorite" id="" value="2" /><br />
+                        打豆豆<input type="checkbox" name="favorite" id="" value="3" /><br />
+        	籍贯：<br />
+        	<select name="address">
+        		<option value="0" selected="selected">--请选择--</option>
+        		<option value="1">北京</option>
+        		<option value="2">上海</option>
+        		<option value="3">广州</option>
+        		<option value="4">深圳</option>
+        	</select>
+        	<br />
+        	文本域：<br />
+        	<textarea name="intro" rows="10" cols="30"></textarea><br />
+        	普通按钮：
+        	<input type="button" name="" id="" value="普通按钮" />
+        	隐藏标签：
+        	<input type="hidden" name="" id="" value="哈哈" />
+        	<input type="submit" id="" name="" value="登录" />
+        </form>
+	</body>
+</html>
